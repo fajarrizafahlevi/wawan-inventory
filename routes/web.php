@@ -15,7 +15,11 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.base');
+});
+
+Route::get('/about', function () {
+    return view('about.index');
 });
 
 Route::get('/home', [HomeController::class, 'index']);
